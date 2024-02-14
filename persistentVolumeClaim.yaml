@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nfs
+  namespace: test-nfs  
+spec:
+  storageClassName: slow
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Mi
